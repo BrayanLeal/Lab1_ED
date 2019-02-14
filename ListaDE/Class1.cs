@@ -1,12 +1,14 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Web;
+using System.Web.Mvc;
 using System.Text;
 using System.Threading.Tasks;
 
 namespace ListaDE
 {
-    public class DLL
+    public class DLL<T>
     {
         class Nodo
         {
@@ -14,10 +16,12 @@ namespace ListaDE
             public Nodo ant, sig;
         }
         private Nodo raiz;
+
         public DLL()
         {
             raiz = null;
         }
+        //Probar con T value
         void Insertar(int pos, int x)
         {
             if (pos <= Cantidad() + 1)
